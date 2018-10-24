@@ -1,0 +1,82 @@
+<ion-content>
+  <div class="navbar-fixed">
+    <nav class="nav-extended">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Brazil JS BH</a>
+      </div>
+      <div class="nav-content center">
+        <h6>Temperatura e Umidade do Ar</h6>
+        <h6>Liga / Desliga LED</h6>
+
+      </div>
+    </nav>
+  </div>
+  <br>
+  <br>
+  <div class="container content">
+    <br/>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image center">
+            <span id="currentTemp" class="statistic">-</span>
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+              Temperatura
+              <i class="material-icons right">more_vert</i>
+            </span>
+              Clique para ver histórico
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              Histórico
+              <i class="material-icons right">close</i>
+            </span>
+            <canvas id="tempLineChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image center">
+            <span id="currentUmid" class="statistic">-</span>
+          </div>
+          <div class="card-content activator" >
+            <span class="card-title grey-text text-darken-4">
+              Umidade
+              <i class="material-icons right">more_vert</i>
+            </span>
+            Clique para ver histórico
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              Histórico
+              <i class="material-icons right">close</i>
+            </span>
+            <canvas id="umidLineChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image center">
+            <i id="currentLamp" class="material-icons statistic">flash_on</i>
+          </div>
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-4">
+              Lâmpada
+            </span>
+            <a class="waves-effect waves-light btn col s12" id="btn-lamp">
+              <i class="material-icons left">flash_on</i>
+              Ligar/Desligar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+</ion-content>
