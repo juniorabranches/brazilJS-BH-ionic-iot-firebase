@@ -23,7 +23,6 @@ export class HomePage {
   ) { 
       var lampRef = this.db.ref('lamp');
       var currentLampValue = false;
-
       this.umidRef.on('value', this.onNewData('currentUmid', 'umidLineChart' , 'Umidade', '%'));
       this.tempRef.on('value', this.onNewData('currentTemp', 'tempLineChart' , 'Temperatura', 'C°'));
       lampRef.on('value', function(snapshot){
@@ -35,8 +34,6 @@ export class HomePage {
           el.classList.remove('amber-text');
         }
         currentLampValue = !!value;
-
-        
       }); 
       
       setTimeout(() => {
@@ -45,7 +42,6 @@ export class HomePage {
           lampRef.set(!currentLampValue);
         }); 
       }, 3000)
- 
   }
  
 
